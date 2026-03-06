@@ -16,6 +16,8 @@ package has you covered.
 
 [🇷🇺 Читать на русском](README.md)
 
+> 📖 **[Full documentation available on Wiki](https://github.com/tigusigalpa/yandex-search-php/wiki)**
+
 ## What's Inside
 
 - **Web Search** — classic text search with sorting, grouping, regions, and family filters
