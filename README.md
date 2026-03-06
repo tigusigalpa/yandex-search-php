@@ -40,11 +40,7 @@ composer require tigusigalpa/yandex-search-php
 ```
 
 Пакет зависит от [`tigusigalpa/yandex-cloud-client-php`](https://github.com/tigusigalpa/yandex-cloud-client-php) для
-аутентификации, убедитесь, что он тоже установлен:
-
-```bash
-composer require tigusigalpa/yandex-cloud-client-php
-```
+аутентификации
 
 ## Быстрый старт
 
