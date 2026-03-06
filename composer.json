@@ -1,0 +1,68 @@
+{
+    "name": "tigusigalpa/yandex-search-php",
+    "description": "PHP/Laravel SDK for Yandex Search API integration. Supports web search, generative search, image search, and keyword statistics (Wordstat).",
+    "type": "library",
+    "keywords": ["yandex", "search", "api", "laravel", "php", "sdk", "ai", "wordstat", "image-search"],
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Igor Sazonov",
+            "email": "sovletig@gmail.com",
+            "homepage": "https://github.com/tigusigalpa"
+        }
+    ],
+    "homepage": "https://github.com/tigusigalpa/yandex-search-php",
+    "support": {
+        "issues": "https://github.com/tigusigalpa/yandex-search-php/issues",
+        "source": "https://github.com/tigusigalpa/yandex-search-php"
+    },
+    "require": {
+        "php": "^8.0",
+        "guzzlehttp/guzzle": "^7.0",
+        "tigusigalpa/yandex-cloud-client-php": "^1.0",
+        "ext-json": "*",
+        "ext-simplexml": "*"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0|^10.0|^11.0",
+        "orchestra/testbench": "^6.0|^7.0|^8.0|^9.0",
+        "mockery/mockery": "^1.5",
+        "phpstan/phpstan": "^1.0",
+        "squizlabs/php_codesniffer": "^3.6"
+    },
+    "suggest": {
+        "illuminate/support": "Required for Laravel integration (^8.0|^9.0|^10.0|^11.0|^12.0)"
+    },
+    "autoload": {
+        "psr-4": {
+            "Tigusigalpa\\YandexSearch\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tigusigalpa\\YandexSearch\\Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "test": "phpunit",
+        "phpstan": "phpstan analyse src --level=8",
+        "cs-check": "phpcs src tests --standard=PSR12",
+        "cs-fix": "phpcbf src tests --standard=PSR12"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Tigusigalpa\\YandexSearch\\Laravel\\YandexSearchServiceProvider"
+            ],
+            "aliases": {
+                "YandexSearch": "Tigusigalpa\\YandexSearch\\Laravel\\Facades\\YandexSearch"
+            }
+        }
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
